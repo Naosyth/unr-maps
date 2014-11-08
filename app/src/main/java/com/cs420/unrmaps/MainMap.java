@@ -1,17 +1,38 @@
 package com.cs420.unrmaps;
 
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.LatLng;
+
 
 public class MainMap extends Activity {
+    static final LatLng Point = new LatLng(39.544697, -119.816931);
+    private GoogleMap googleMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_map);
+        try{
+            if(googleMap == null)
+            {
+                googleMap = ((MapFragment) getFragmentManager().
+                findFragmentById(R.id.map)).getMap();
+            }
+            googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+            googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition(Point, 15, 0, 0)));
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+        }
     }
 
 
