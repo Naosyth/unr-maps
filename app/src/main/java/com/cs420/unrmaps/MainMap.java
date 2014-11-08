@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -13,7 +14,7 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 
 
-public class MainMap extends Activity {
+public class MainMap extends Activity implements GoogleMap.OnMapClickListener{
     static final LatLng Point = new LatLng(39.544697, -119.816931);
     private GoogleMap googleMap;
 
@@ -29,6 +30,7 @@ public class MainMap extends Activity {
             }
             googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
             googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition(Point, 15, 0, 0)));
+            googleMap.setOnMapClickListener(this);
         }
         catch(Exception e) {
             e.printStackTrace();
@@ -56,5 +58,11 @@ public class MainMap extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onMapClick(LatLng latLng) {
+        Toast toast = Toast.makeText(getApplicationContext(), latLng.toString(), Toast.LENGTH_SHORT);
+        toast.show();
     }
 }
