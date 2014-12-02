@@ -71,7 +71,7 @@ public class Main extends Activity implements GoogleMap.OnMapClickListener{
 
 
         mTitle = mDrawerTitle = getTitle();
-        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.drawable.ic_launcher, R.string.drawer_open, R.string.drawer_close){
+        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.drawable.ic_nav_drawer_toggle, R.string.drawer_open, R.string.drawer_close){
             public void onDrawerClosed(View view){
                 super.onDrawerClosed(view);
                 getActionBar().setTitle(mTitle);
