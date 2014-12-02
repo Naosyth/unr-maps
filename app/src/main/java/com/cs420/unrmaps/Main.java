@@ -2,6 +2,8 @@ package com.cs420.unrmaps;
 
 
 import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -9,22 +11,16 @@ import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 
-import java.util.List;
 
-
-public class MainMap extends Activity implements GoogleMap.OnMapClickListener{
-    static final LatLng Point = new LatLng(39.544697, -119.816931);
-    private GoogleMap googleMap;
+public class Main extends Activity implements GoogleMap.OnMapClickListener{
 
     //Navigation Drawer
     private String[] mNavOptions;
@@ -34,30 +30,45 @@ public class MainMap extends Activity implements GoogleMap.OnMapClickListener{
     private CharSequence mDrawerTitle;
     private CharSequence mTitle;
 
+    //list of fragments used in this application. Order matters: place in order they appear on the
+    //nav drawer menu
+    private String[] fragments = {
+            "com.cs420.unrmaps.UNRMapFragment",
+            "com.cs420.unrmaps.BuildingList",
+            "com.cs420.unrmaps.FavoritesList"
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_map);
-        try{
-            if(googleMap == null)
-            {
-                googleMap = ((MapFragment) getFragmentManager().
-                findFragmentById(R.id.map)).getMap();
-            }
-            googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-            googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition(Point, 15, 0, 0)));
-            googleMap.setOnMapClickListener(this);
-        }
-        catch(Exception e) {
-            e.printStackTrace();
-        }
+        setContentView(R.layout.activity_main);
 
+        //initialize nav drawer
         mNavOptions = getResources().getStringArray(R.array.nav_options);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
 
+        //setup listview within navigation drawer
         mDrawerList.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mNavOptions));
-        //mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
+        mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
+
+        //clicking on item within the drawer (essentially manages fragment navigation)
+        mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
+                mDrawerLayout.setDrawerListener(new DrawerLayout.SimpleDrawerListener() {
+                    @Override
+                    public void onDrawerClosed(View drawerView) {
+                        super.onDrawerClosed(drawerView);
+                        FragmentTransaction tx = getFragmentManager().beginTransaction();
+                        tx.replace(R.id.content_frame, Fragment.instantiate(Main.this, fragments[position]));
+                        tx.commit();
+                    }
+                });
+                mDrawerLayout.closeDrawer(mDrawerList);
+            }
+        });
+
 
         mTitle = mDrawerTitle = getTitle();
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.drawable.ic_launcher, R.string.drawer_open, R.string.drawer_close){
@@ -78,6 +89,10 @@ public class MainMap extends Activity implements GoogleMap.OnMapClickListener{
 
         getActionBar().setDisplayHomeAsUpEnabled(true);
         getActionBar().setHomeButtonEnabled(true);
+        FragmentTransaction tx = getFragmentManager().beginTransaction();
+        tx.replace(R.id.content_frame, Fragment.instantiate(Main.this, "com.cs420.unrmaps.UNRMapFragment"));
+        tx.commit();
+
     }
 
     @Override
@@ -132,5 +147,26 @@ public class MainMap extends Activity implements GoogleMap.OnMapClickListener{
     public void onMapClick(LatLng latLng) {
         Toast toast = Toast.makeText(getApplicationContext(), latLng.toString(), Toast.LENGTH_SHORT);
         toast.show();
+    }
+
+
+    private class DrawerItemClickListener implements ListView.OnItemClickListener {
+
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            selectItem(position);
+        }
+
+    }
+
+    private void selectItem(int position) {
+        mDrawerList.setItemChecked(position, true);
+        setTitle(mNavOptions[position]);
+        mDrawerLayout.closeDrawer(mDrawerList);
+    }
+
+    public void setTitle(CharSequence title){
+        mTitle = title;
+        getActionBar().setTitle(mTitle);
     }
 }
