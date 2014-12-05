@@ -82,4 +82,6 @@
         <item>William J. Raggio Building</item>
     </string-array>
 
+    <string name="title_activity_floor_plan">FloorPlanActivity</string>
+
 </resources>

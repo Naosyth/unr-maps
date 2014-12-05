@@ -5,6 +5,7 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.maps.CameraUpdate;
@@ -24,7 +25,7 @@ import com.google.android.gms.maps.model.LatLng;
  * Use the {@link UNRMapFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class UNRMapFragment extends Fragment{
+public class UNRMapFragment extends Fragment implements GoogleMap.OnMapClickListener{
 
     private GoogleMap mMap;
     private LatLng mUNRLocation = new LatLng(39.542634, -119.815461);
@@ -59,15 +60,19 @@ public class UNRMapFragment extends Fragment{
         CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(mUNRLocation, 15);
         mMap.moveCamera(cameraUpdate);
 
-        return v;
+        mMap.setOnMapClickListener(this);
 
+        return v;
     }
 
+    @Override
+    public void onMapClick(LatLng latLng) {
+        Toast toast = Toast.makeText(getActivity(), latLng.toString(), Toast.LENGTH_SHORT);
+        toast.show();
+     }
+
     private void configureMap(GoogleMap map) {
-
-
         map.setMyLocationEnabled(false);
-
     }
 
     @Override
