@@ -30,7 +30,6 @@ public class FloorPlanActivity extends Activity {
 
         building = this.getIntent().getParcelableExtra("building");
         floorPlans = building.getFloorPlans();
-
         setTitle(building.getName());
 
         if (savedInstanceState == null) {

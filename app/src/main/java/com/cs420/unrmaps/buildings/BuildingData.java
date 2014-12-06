@@ -12,10 +12,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class BuildingData {
+    private static BuildingData instance;
     private ArrayList<Building> buildingList = new ArrayList<Building>();
 
-    public BuildingData(Context context) {
+    private BuildingData(Context context) {
         generateBuildingList(context);
+    }
+
+    public static synchronized BuildingData getInstance(Context context) {
+        if (instance == null)
+            instance = new BuildingData(context);
+        return instance;
     }
 
     private void generateBuildingList(Context context) {
