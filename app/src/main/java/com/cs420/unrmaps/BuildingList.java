@@ -5,18 +5,18 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.cs420.unrmaps.buildings.BuildingAdapter;
+import com.cs420.unrmaps.buildings.BuildingData;
 
 public class BuildingList extends ListFragment {
-    private String[] mBuildingNames;
+    private BuildingData data;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        mBuildingNames = getResources().getStringArray(R.array.building_names);
-        setListAdapter(new ArrayAdapter<String>(inflater.getContext(), android.R.layout.simple_list_item_1,
-                mBuildingNames));
+        data = BuildingData.getInstance(getActivity());
+        setListAdapter(new BuildingAdapter(getActivity(), data.getBuildingList()));
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 

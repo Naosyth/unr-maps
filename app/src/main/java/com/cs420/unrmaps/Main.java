@@ -20,7 +20,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.LatLng;
 
 
-public class Main extends Activity implements GoogleMap.OnMapClickListener{
+public class Main extends Activity {
 
     //Navigation Drawer
     private String[] mNavOptions;
@@ -92,7 +92,6 @@ public class Main extends Activity implements GoogleMap.OnMapClickListener{
         FragmentTransaction tx = getFragmentManager().beginTransaction();
         tx.replace(R.id.content_frame, Fragment.instantiate(Main.this, "com.cs420.unrmaps.UNRMapFragment"));
         tx.commit();
-
     }
 
     @Override
@@ -142,13 +141,6 @@ public class Main extends Activity implements GoogleMap.OnMapClickListener{
 
         return super.onOptionsItemSelected(item);
     }
-
-    @Override
-    public void onMapClick(LatLng latLng) {
-        Toast toast = Toast.makeText(getApplicationContext(), latLng.toString(), Toast.LENGTH_SHORT);
-        toast.show();
-    }
-
 
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
 

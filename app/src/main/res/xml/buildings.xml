@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <building>
+        <name>Anderson Health Science</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Ansari Business Building</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Applied Research Facility</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Argenta Hall</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Artemesia Building</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Athletic Academic Center</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Bioinfromatics</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Brian Whalen Parking Complex</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Canada Hall</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Center for Molecular Medicine</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Chemistry Building</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Church Fine Arts</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Clark Administration</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Computing Center</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Continuing Education Building</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Davidson Mathematics and Science Center</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Edmund J. Cain Hall</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Environmental Research Facility</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Fitzgerald Student Services Building</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Fleischmann Agriculture</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Fleischmann Planetarium</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Frandsen Humanities</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Getchell Building</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Harry Reid Engineering Laboratory</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Howard Medical Sciences</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Joe Crowley Student Union</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Jones Center</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Jot Travis Building</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Juniper Hall</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Knudtsen Resource Center</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Lawlor Events Center</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Leifson Physics</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Life Science</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Lincoln Hall</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Living Learning Community</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Lombardi Recreation Center</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Mack Social Science</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Mackay Mines</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Mackay Science</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Manville Health Science</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Manzanita Hall</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Mathewson / IGT Knowledge Center</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>National Judicial College</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Nell J. Redfield Building</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Nellor Biomedical Sciencees</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Nevada State Health Laboratory</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Nye Hall</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Orvis Building</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Palmer Engineering</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Paul Laxalt Mineral Engineering</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Paul Laxalt Mineral Research</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Pennington Health Sciences Building</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Pennington Medical Education Building</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Reynolds School of Journalism</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Ross Hall</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Sarah H. Fleischmann Building</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Savitt Medical Science</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Schulich Lecture Hall</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Scrugham Engineering / Mines</name>
+        <lat>39.539858</lat>
+        <long>-119813443</long>
+        <floorplan>
+            <item>sem_1</item>
+            <item>sem_2</item>
+            <item>sem_3</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Sierra Hall</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Thompson Building</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>Virginia Street Gym</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>White Pine Hall</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+    <building>
+        <name>William J. Raggio Building</name>
+        <lat>0.0</lat>
+        <long>0.0</long>
+        <floorplan>
+            <item>floor_missing</item>
+        </floorplan>
+    </building>
+
+</resources>
