@@ -2,8 +2,8 @@
 <resources>
     <building>
         <name>Anderson Health Science</name>
-        <lat>0.0</lat>
-        <long>0.0</long>
+        <lat>39.549047</lat>
+        <long>-119.816881</long>
         <floorplan>
             <item>floor_missing</item>
         </floorplan>
@@ -11,8 +11,8 @@
 
     <building>
         <name>Ansari Business Building</name>
-        <lat>0.0</lat>
-        <long>0.0</long>
+        <lat>39.540017</lat>
+        <long>-119.814678</long>
         <floorplan>
             <item>floor_missing</item>
         </floorplan>
@@ -29,8 +29,8 @@
 
     <building>
         <name>Argenta Hall</name>
-        <lat>0.0</lat>
-        <long>0.0</long>
+        <lat>39.538813</lat>
+        <long>-119.817888</long>
         <floorplan>
             <item>floor_missing</item>
         </floorplan>
@@ -525,7 +525,7 @@
     <building>
         <name>Scrugham Engineering / Mines</name>
         <lat>39.539858</lat>
-        <long>-119813443</long>
+        <long>-119.813443</long>
         <floorplan>
             <item>sem_1</item>
             <item>sem_2</item>

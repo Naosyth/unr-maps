@@ -14,7 +14,9 @@
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_floor_plan">Floor Plans</string>
 
-    <string name="title_activity_floor_plan">FloorPlanActivity</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="pref_map_settingsTitle">Map Settings</string>
 
 </resources>

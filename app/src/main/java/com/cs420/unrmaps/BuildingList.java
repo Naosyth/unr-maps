@@ -15,6 +15,7 @@ public class BuildingList extends ListFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        getActivity().getActionBar().setTitle("UNR Building List");
         data = BuildingData.getInstance(getActivity());
         setListAdapter(new BuildingAdapter(getActivity(), data.getBuildingList()));
         return super.onCreateView(inflater, container, savedInstanceState);
