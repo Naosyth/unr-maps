@@ -1,7 +1,6 @@
 package com.cs420.unrmaps;
 
 import android.app.Activity;
-import android.app.ActionBar;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,9 +8,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
-import android.widget.ImageView;
+import android.widget.FrameLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 
 import com.cs420.unrmaps.buildings.Building;
 import com.cs420.unrmaps.buildings.FloorAdapter;
@@ -20,7 +19,6 @@ import java.util.ArrayList;
 
 
 public class FloorPlanActivity extends Activity {
-    private static Building building;
     private static ArrayList<Integer> floorPlans;
 
     @Override
@@ -28,7 +26,7 @@ public class FloorPlanActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_floor_plan);
 
-        building = this.getIntent().getParcelableExtra("building");
+        Building building = this.getIntent().getParcelableExtra("building");
         floorPlans = building.getFloorPlans();
         setTitle(building.getName());
 
@@ -77,7 +75,7 @@ public class FloorPlanActivity extends Activity {
             View rootView = inflater.inflate(R.layout.fragment_floor_plan, container, false);
 
             listView = (ListView) rootView.findViewById(R.id.listView);
-            listView.setAdapter(new FloorAdapter(getActivity(), floorPlans));
+            listView.setAdapter(new FloorAdapter(getActivity(), floorPlans, (RelativeLayout) rootView.findViewById(R.id.floor_plans)));
 
             return rootView;
         }
