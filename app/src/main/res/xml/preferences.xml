@@ -1,0 +1,15 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.originate.graphit.SettingsActivity">
+
+    <PreferenceCategory
+        android:title="@string/pref_map_settingsTitle">
+
+        <CheckBoxPreference
+            android:key="satellite enabled"
+            android:title="Satellite Mode Enabled" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -4,10 +4,12 @@ package com.cs420.unrmaps;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -60,11 +62,12 @@ public class Main extends Activity {
                     @Override
                     public void onDrawerClosed(View drawerView) {
                         super.onDrawerClosed(drawerView);
-                        FragmentTransaction tx = getFragmentManager().beginTransaction();
-                        tx.replace(R.id.content_frame, Fragment.instantiate(Main.this, fragments[position]));
-                        tx.commit();
                     }
                 });
+                FragmentTransaction tx = getFragmentManager().beginTransaction();
+                tx.replace(R.id.content_frame, Fragment.instantiate(Main.this, fragments[position]));
+                tx.addToBackStack(mNavOptions[position]);
+                tx.commit();
                 mDrawerLayout.closeDrawer(mDrawerList);
             }
         });
@@ -97,7 +100,6 @@ public class Main extends Activity {
     @Override
     protected void onPostCreate(Bundle savedInstanceState){
         super.onPostCreate(savedInstanceState);
-
         mDrawerToggle.syncState();
     }
 
@@ -111,23 +113,18 @@ public class Main extends Activity {
     public boolean onPrepareOptionsMenu(Menu menu)
     {
         boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
-        //hide stuff if necessary
         return super.onPrepareOptionsMenu(menu);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main_map, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         if(mDrawerToggle.onOptionsItemSelected(item))
         {
             return true;
@@ -136,6 +133,8 @@ public class Main extends Activity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent settingsIntent = new Intent(this, SettingsActivity.class);
+            startActivity(settingsIntent);
             return true;
         }
 
@@ -143,12 +142,10 @@ public class Main extends Activity {
     }
 
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
-
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             selectItem(position);
         }
-
     }
 
     private void selectItem(int position) {

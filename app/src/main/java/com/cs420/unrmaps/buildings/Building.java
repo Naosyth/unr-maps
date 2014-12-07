@@ -38,6 +38,14 @@ public class Building implements Parcelable {
         return floorPlans;
     }
 
+    public float getLatitude() {
+        return latitude;
+    }
+
+    public float getLongitude() {
+        return longitude;
+    }
+
     public void clickHandler(Context context) {
         Intent floorPlanIntent = new Intent(context, FloorPlanActivity.class);
         floorPlanIntent.putExtra("building", this);

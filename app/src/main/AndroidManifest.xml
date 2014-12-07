@@ -37,10 +37,15 @@
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyCeZ6FnPNUpOOl_KPDBrjqOoK8I5M5msfc" />
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 
         <activity
             android:name="com.cs420.unrmaps.FloorPlanActivity"
             android:label="@string/title_activity_floor_plan" >
+        </activity>
+        <activity
+            android:name="com.cs420.unrmaps.SettingsActivity"
+            android:label="@string/title_activity_settings" >
         </activity>
     </application>
 
