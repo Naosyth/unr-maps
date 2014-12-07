@@ -227,10 +227,13 @@
 
     <building>
         <name>Joe Crowley Student Union</name>
-        <lat>0.0</lat>
-        <long>0.0</long>
+        <lat>39.544533</lat>
+        <long>-119.816091</long>
         <floorplan>
-            <item>floor_missing</item>
+            <item>jcsu_1</item>
+            <item>jcsu_2</item>
+            <item>jcsu_3</item>
+            <item>jcsu_4</item>
         </floorplan>
     </building>
 
@@ -371,10 +374,14 @@
 
     <building>
         <name>Mathewson / IGT Knowledge Center</name>
-        <lat>0.0</lat>
-        <long>0.0</long>
+        <lat>39.543583</lat>
+        <long>-119.815410</long>
         <floorplan>
-            <item>floor_missing</item>
+            <item>kc_1</item>
+            <item>kc_2</item>
+            <item>kc_3</item>
+            <item>kc_4</item>
+            <item>kc_5</item>
         </floorplan>
     </building>
 
