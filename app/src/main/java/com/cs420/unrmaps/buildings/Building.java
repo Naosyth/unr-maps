@@ -6,6 +6,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import com.cs420.unrmaps.FloorPlanActivity;
+import com.cs420.unrmaps.FloorPlanActivity_ViewPager;
 
 import java.util.ArrayList;
 
