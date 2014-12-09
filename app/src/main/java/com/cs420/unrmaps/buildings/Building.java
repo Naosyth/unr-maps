@@ -48,7 +48,7 @@ public class Building implements Parcelable {
     }
 
     public void clickHandler(Context context) {
-        Intent floorPlanIntent = new Intent(context, FloorPlanActivity.class);
+        Intent floorPlanIntent = new Intent(context, FloorPlanActivity_ViewPager.class);
         floorPlanIntent.putExtra("building", this);
         context.startActivity(floorPlanIntent);
     }

@@ -45,6 +45,10 @@
             android:label="@string/title_activity_floor_plan" >
         </activity>
         <activity
+            android:name="com.cs420.unrmaps.FloorPlanActivity_ViewPager"
+            android:label="@string/title_activity_floor_plan" >
+        </activity>
+        <activity
             android:name="com.cs420.unrmaps.SettingsActivity"
             android:label="@string/title_activity_settings" >
         </activity>
