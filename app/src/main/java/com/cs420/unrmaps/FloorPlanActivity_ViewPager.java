@@ -94,7 +94,9 @@ public class FloorPlanActivity_ViewPager extends Activity {
         @Override
         protected Bitmap doInBackground(Integer... params) {
             data = params[0];
-            return BitmapFactory.decodeResource(getResources(), data, new BitmapFactory.Options());
+            BitmapFactory.Options options = new BitmapFactory.Options();
+            options.inSampleSize = 1;
+            return BitmapFactory.decodeResource(getResources(), data, options );
         }
 
         // Once complete, see if ImageView is still around and set bitmap.
@@ -103,9 +105,7 @@ public class FloorPlanActivity_ViewPager extends Activity {
             if (imageViewReference != null && bitmap != null) {
                 final ImageView imageView = imageViewReference.get();
                 if (imageView != null) {
-                    //Try an async task for setting the bitmap...
-//                    imageView.setImageBitmap(bitmap);
-                    Log.e ("test", "got here");
+                    imageView.setImageBitmap(bitmap);
                 }
             }
         }
