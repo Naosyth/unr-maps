@@ -20,6 +20,7 @@ import com.cs420.unrmaps.R;
 
 import java.util.ArrayList;
 
+// Handles displaying floor plan images in a listview
 public class FloorAdapter extends ArrayAdapter<Integer> {
     private final ArrayList<Integer> floors;
     private final Activity context;
@@ -48,6 +49,7 @@ public class FloorAdapter extends ArrayAdapter<Integer> {
             view = inflator.inflate(R.layout.list_floor, parent, false);
             final ViewHolder viewHolder = new ViewHolder();
 
+            // Find text and image views
             viewHolder.text = (TextView) view.findViewById(R.id.textView);
             viewHolder.image = (ImageView) view.findViewById(R.id.imageButton);
 
@@ -58,13 +60,16 @@ public class FloorAdapter extends ArrayAdapter<Integer> {
             ((ViewHolder) view.getTag()).text.setTag("floor");
         }
 
+        // Set text and image views
         ViewHolder holder = (ViewHolder) view.getTag();
         holder.text.setText("Floor: " + (position+1));
         holder.image.setImageResource(floors.get(position));
 
+        // Add on click listener to floorplan image
         holder.image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // When the imageview is clicked, zoom it to full screen
                 zoomImageFromThumb(view.findViewById(R.id.imageButton), floors.get(position));
             }
         });
@@ -75,6 +80,7 @@ public class FloorAdapter extends ArrayAdapter<Integer> {
         return view;
     }
 
+    // Zoom the image view
     private void zoomImageFromThumb(final View thumbView, int imageResId) {
         // If there's an animation in progress, cancel it
         // immediately and proceed with this one.
