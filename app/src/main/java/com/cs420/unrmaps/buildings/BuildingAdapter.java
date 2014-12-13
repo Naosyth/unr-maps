@@ -11,6 +11,7 @@ import com.cs420.unrmaps.R;
 
 import java.util.ArrayList;
 
+// Describes how to displays Building objects when used in a listview.
 public class BuildingAdapter extends ArrayAdapter<Building> {
     private final ArrayList<Building> buildings;
     private final Activity context;
@@ -35,8 +36,10 @@ public class BuildingAdapter extends ArrayAdapter<Building> {
             view = inflator.inflate(R.layout.list_item, null);
             final ViewHolder viewHolder = new ViewHolder();
 
+            // Get the textview
             viewHolder.text = (TextView) view.findViewById(R.id.list_item_textview);
 
+            // Set the textview's text
             view.setTag(viewHolder);
             viewHolder.text.setTag(building);
         } else {
@@ -44,6 +47,7 @@ public class BuildingAdapter extends ArrayAdapter<Building> {
             ((ViewHolder) view.getTag()).text.setTag(building);
         }
 
+        // Add click listener
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
