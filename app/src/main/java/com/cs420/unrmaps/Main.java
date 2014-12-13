@@ -64,6 +64,8 @@ public class Main extends Activity {
                         super.onDrawerClosed(drawerView);
                     }
                 });
+
+                //setup and switch fragments
                 FragmentTransaction tx = getFragmentManager().beginTransaction();
                 tx.replace(R.id.content_frame, Fragment.instantiate(Main.this, fragments[position]));
                 tx.addToBackStack(mNavOptions[position]);
@@ -74,10 +76,14 @@ public class Main extends Activity {
 
 
         mTitle = mDrawerTitle = getTitle();
+
+        //setup the drawer toggle and related actions/events
         mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.drawable.ic_nav_drawer_toggle, R.string.drawer_open, R.string.drawer_close){
             public void onDrawerClosed(View view){
                 super.onDrawerClosed(view);
                 getActionBar().setTitle(mTitle);
+
+                //refresh options
                 invalidateOptionsMenu();
             }
 
@@ -85,6 +91,8 @@ public class Main extends Activity {
             {
                 super.onDrawerOpened(drawerView);
                 getActionBar().setTitle(mDrawerTitle);
+
+                //refresh options
                 invalidateOptionsMenu();
             }
         };

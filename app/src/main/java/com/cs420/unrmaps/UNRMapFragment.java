@@ -24,14 +24,6 @@ import java.util.ArrayList;
 import java.util.PriorityQueue;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link UNRMapFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link UNRMapFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class UNRMapFragment extends Fragment implements GoogleMap.OnMapClickListener{
 
     private GoogleMap mMap;
@@ -68,6 +60,7 @@ public class UNRMapFragment extends Fragment implements GoogleMap.OnMapClickList
         else
             mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 
+        //default the camera to UNR campus
         CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(mUNRLocation, 15);
         mMap.moveCamera(cameraUpdate);
 
