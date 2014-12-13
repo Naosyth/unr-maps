@@ -13,6 +13,7 @@ import com.cs420.unrmaps.buildings.BuildingData;
 public class BuildingList extends ListFragment {
     private BuildingData data;
 
+    // Loads the building data into a list view using the building adapter
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         getActivity().getActionBar().setTitle("UNR Building List");
@@ -24,6 +25,5 @@ public class BuildingList extends ListFragment {
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
-        //TODO: Open floorplan view
     }
 }
