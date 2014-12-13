@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:choiceMode="none" />
 
-    <com.ortiz.touch.TouchImageView
+    <com.cs420.unrmaps.TouchImageView
         android:id="@+id/expanded_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

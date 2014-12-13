@@ -2,10 +2,13 @@ package com.cs420.unrmaps.buildings;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.preference.PreferenceManager;
 
 import com.cs420.unrmaps.FloorPlanActivity;
+import com.cs420.unrmaps.FloorPlanActivity_ViewPager;
 
 import java.util.ArrayList;
 
@@ -47,7 +50,14 @@ public class Building implements Parcelable {
     }
 
     public void clickHandler(Context context) {
-        Intent floorPlanIntent = new Intent(context, FloorPlanActivity.class);
+        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);
+        Intent floorPlanIntent;
+        if(settings.getBoolean("use viewpager", true)){
+            floorPlanIntent = new Intent(context, FloorPlanActivity_ViewPager.class);
+        }
+        else{
+            floorPlanIntent = new Intent(context, FloorPlanActivity.class);
+        }
         floorPlanIntent.putExtra("building", this);
         context.startActivity(floorPlanIntent);
     }

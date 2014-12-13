@@ -11,5 +11,12 @@
             android:key="satellite enabled"
             android:title="Satellite Mode Enabled" />
     </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/settings_floorplan">
+        <CheckBoxPreference
+            android:key="use viewpager"
+            android:title="Use ViewPager"/>
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
