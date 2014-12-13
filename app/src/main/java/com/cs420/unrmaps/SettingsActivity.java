@@ -3,6 +3,7 @@ package com.cs420.unrmaps;
 import android.app.Activity;
 import android.os.Bundle;
 
+// Standard settings activity
 public class SettingsActivity extends Activity {
     public SettingsActivity() {
     }

@@ -26,6 +26,7 @@ public class FloorPlanActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_floor_plan);
 
+        // Get the building data that was passed along with the Intent
         Building building = this.getIntent().getParcelableExtra("building");
         floorPlans = building.getFloorPlans();
         setTitle(building.getName());
@@ -69,6 +70,7 @@ public class FloorPlanActivity extends Activity {
         public FloorPlanFragment() {
         }
 
+        // Load the floor plan list with actual floor plan images (using floor plan adapter)
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {

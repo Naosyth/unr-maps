@@ -5,6 +5,7 @@ import android.preference.PreferenceFragment;
 
 import com.cs420.unrmaps.R;
 
+// Standard preferences fragment
 public class SettingsFragment extends PreferenceFragment {
     public SettingsFragment() {
     }
@@ -13,6 +14,7 @@ public class SettingsFragment extends PreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // Load in our preferences from XML
         addPreferencesFromResource(R.xml.preferences);
     }
 }
