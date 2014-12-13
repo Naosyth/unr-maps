@@ -65,6 +65,7 @@ public class FloorPlanActivity_ViewPager extends Activity {
         public View instantiateItem(ViewGroup container, int position) {
             TouchImageView img = new TouchImageView(container.getContext());
 
+            //load floorplan image
             ((FloorPlanActivity_ViewPager)mContext).loadBitmap(images.get(position), img);
             container.addView(img, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
             return img;
@@ -81,6 +82,7 @@ public class FloorPlanActivity_ViewPager extends Activity {
         }
     }
 
+    //Async task used for loading images
     private class BitmapWorkerTask extends AsyncTask<Integer, Void, Bitmap> {
         private final WeakReference<TouchImageView> imageViewReference;
         private int data = 0;
@@ -95,7 +97,11 @@ public class FloorPlanActivity_ViewPager extends Activity {
         protected Bitmap doInBackground(Integer... params) {
             data = params[0];
             BitmapFactory.Options options = new BitmapFactory.Options();
+
+            //needed due to bug, samples from the image file at 1:1 ratio
             options.inSampleSize = 1;
+
+            //decode file
             return BitmapFactory.decodeResource(getResources(), data, options );
         }
 
@@ -105,6 +111,8 @@ public class FloorPlanActivity_ViewPager extends Activity {
             if (imageViewReference != null && bitmap != null) {
                 final ImageView imageView = imageViewReference.get();
                 if (imageView != null) {
+
+                    //set bitmap in the view
                     imageView.setImageBitmap(bitmap);
                 }
             }
